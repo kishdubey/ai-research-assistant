@@ -4,7 +4,17 @@
 
 This project is a sophisticated AI-powered Research Assistant designed to automate and accelerate the process of exploring complex academic topics. A user can input a research query, and the system leverages a multi-agent backend to find relevant papers, analyze them for key concepts and trends, identify research gaps, and generate new, testable hypotheses.
 
-The application features a dynamic, data-driven frontend built with React and a powerful Python backend using FastAPI. It is uniquely designed to support both local, on-premise AI models via Ollama and cloud-based models from OpenAI, giving the user complete control over cost, privacy, and performance.
+The application features a clean, modern web interface built with HTML, CSS, and JavaScript, powered by a robust Python backend using FastAPI. It is uniquely designed to support both local, on-premise AI models via Ollama and cloud-based models from OpenAI, giving the user complete control over cost, privacy, and performance.
+
+## Demo
+
+Here's the AI Research Assistant in action:
+
+![AI Research Assistant Demo](assets/aiassistant.gif)
+
+For a full video demonstration:
+
+[![Watch Full Demo](assets/preview.png)](assets/AIAssistant.mp4)
 
 ## Key Features
 
@@ -20,14 +30,18 @@ The application features a dynamic, data-driven frontend built with React and a 
     *   **Interactive Navigation:** Zoom, pan, and focus on specific nodes
     *   **Node Highlighting:** Automatic highlighting of search results
     *   **Type-based Coloring:** Different colors for different node types
-*   **Dynamic, Data-Driven Frontend:** The UI is built with React and TypeScript, using TanStack Query for efficient data fetching. The entire dashboard—from statistics and paper lists to research gaps and generated hypotheses—is populated from a single, unified API response, ensuring a fluid and reactive user experience.
+*   **Modern Web Interface:**
+    *   **Clean Design:** Minimalistic and intuitive user interface
+    *   **Responsive Layout:** Works seamlessly on desktop and mobile devices
+    *   **Real-time Updates:** Dynamic content updates without page reloads
+    *   **Interactive Components:** Rich user interactions with immediate feedback
 *   **Containerized & Reproducible:** The entire application stack, including the Neo4j database and the Python environment, is containerized using Docker and Docker Compose, ensuring easy setup and consistent operation across different environments.
 
 ## Technical Architecture & Tech Stack
 
 The system follows a modern client-server architecture.
 
-1.  **Frontend (Client):** A user submits a research query through the React UI. The UI also allows selecting the AI provider (Ollama or OpenAI).
+1.  **Frontend (Client):** A user submits a research query through the web interface. The UI also allows selecting the AI provider (Ollama or OpenAI).
 2.  **Request:** The frontend sends a POST request to the `/research` endpoint on the backend.
 3.  **Backend (Server):**
     *   The **FastAPI** application receives the request.
@@ -37,7 +51,7 @@ The system follows a modern client-server architecture.
     *   Key information is structured for storage in a **Neo4j** graph database.
     *   The final, consolidated results are packaged into a single JSON object.
 4.  **Response:** The JSON object is sent back to the client.
-5.  **UI Update:** The React frontend uses the data from the JSON response to update all relevant components on the dashboard, displaying the complete research analysis to the user.
+5.  **UI Update:** The frontend uses the data from the JSON response to update all relevant components on the dashboard, displaying the complete research analysis to the user.
 
 ### Tech Stack
 
@@ -47,7 +61,7 @@ The system follows a modern client-server architecture.
     *   **Cloud:** OpenAI API (GPT-4o)
     *   **Embeddings:** Sentence-Transformers
 *   **Database:** Neo4j (Graph Database)
-*   **Frontend:** React, TypeScript, Vite, TailwindCSS, TanStack Query, Vis.js
+*   **Frontend:** HTML5, CSS3, JavaScript, Vis.js, TailwindCSS
 *   **DevOps & Tooling:** Docker, Docker Compose
 
 ## How to Run the Project
@@ -87,7 +101,7 @@ The system follows a modern client-server architecture.
 
 4.  **Access the Application:**
     Once the containers are running, you can access:
-    *   **The Main Application UI:** `http://localhost:5173`
+    *   **The Main Application UI:** `http://localhost:8000`
     *   **The Backend API Docs:** `http://localhost:8000/docs`
 
 ## Future Work
@@ -96,4 +110,4 @@ The system follows a modern client-server architecture.
 *   **More Data Sources:** Integrate more academic search engines beyond arXiv, such as PubMed, IEEE Xplore, or Google Scholar
 *   **User Accounts & History:** Implement user authentication to allow users to save and revisit their research history
 *   **Collaborative Features:** Add support for shared research spaces and collaborative analysis
-*   **Export & Integration:** Add support for exporting research findings to various formats and integrating with other research tools 
+*   **Export & Integration:** Add support for exporting research findings to various formats and integrating with other research tools
