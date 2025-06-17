@@ -8,9 +8,7 @@ The application features a clean, modern web interface built with HTML, CSS, and
 
 ## Demo
 
-Check out the AI Research Assistant demonstration:
-
-[![AI Research Assistant Demo](assets/preview.png)](assets/AIAssistant.mp4)
+[![AI Research Assistant Demo](assets/preview.png)](https://drive.google.com/file/d/1MxB4TbCpVQnPWY8hKSgr433YaMNe7NAQ/view?usp=sharing)
 
 ## Key Features
 
